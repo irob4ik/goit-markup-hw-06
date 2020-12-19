@@ -293,6 +293,9 @@ header a.reach {
 }
 
 .backdrop .close-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -302,11 +305,172 @@ header a.reach {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
-  background: url(../images/icons/close-black-18dp.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-
   cursor: pointer;
+}
+
+.backdrop .close-modal:hover {
+  fill: var(--hover-focus-text-color);
+}
+
+.backdrop .form {
+  padding: 40px;
+}
+
+.backdrop .form-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.backdrop .form-head {
+  margin: 0px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+
+.backdrop .form-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.backdrop .form-label {
+  margin-right: auto;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--alternative-text-color);
+}
+
+.backdrop .form-input {
+  padding: 0px 42px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.form-list .icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+}
+
+.form-list .form-textarea {
+  padding: 12px 16px;
+  resize: none;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.form .legal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.form .legal-text {
+  margin-left: 7px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--alternative-text-color);
+}
+
+.form .legal-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--hover-focus-text-color);
+}
+
+.form .submit-form {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.form .submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+
+  text-decoration: none;
+  color: var(--alternative-white-color);
+  background-color: var(--hover-focus-text-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.form .submit-name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+
+  letter-spacing: 0.06em;
+}
+
+.form .legal-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute;
+}
+
+.form .icon-checked {
+  width: 16px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+.legal-checkbox:checked + .icon-checked {
+  background-image: url(../images/icons/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-radius: 2px;
+  border-color: transparent;
+  background-color: var(--hover-focus-text-color);
+}
+
+.form-item .form-input:focus-within,
+.form-item .form-textarea:focus-within,
+.form-item:focus-within {
+  border-color: var(--hover-focus-text-color);
+  outline: none;
+  fill: var(--hover-focus-text-color);
+}
+
+.form .submit-button:focus-within {
+  background-color: #188ce8;
+}
+
+.form-list .form-textarea::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  opacity: 1;
 }
 
 /* Studio qualities section */
@@ -621,7 +785,6 @@ footer a.link {
 
 .footer-section-2 {
   margin-left: 70px;
-  /* padding-top: 12px; */
 }
 
 .footer-section-2 .text {
@@ -673,6 +836,23 @@ footer a.link {
 .footer-section-2 .icon-link:focus,
 .footer-section-2 .icon-link:hover {
   background-color: var(--hover-focus-text-color);
+}
+
+.footer-section-3 {
+  margin-left: 93px;
+}
+
+.footer-section-3 .text {
+  margin-top: 0px;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+
+  color: var(--alternative-white-text);
 }
 
 /* Portfolio page */
