@@ -306,6 +306,8 @@ header a.reach {
   border-radius: 50%;
 
   cursor: pointer;
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .backdrop .close-modal:hover {
@@ -356,6 +358,8 @@ header a.reach {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color 250ms var(--timing-function);
 }
 
 .backdrop .form-input:invalid {
@@ -366,6 +370,8 @@ header a.reach {
   position: absolute;
   bottom: 11px;
   left: 12px;
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .form-list .form-textarea {
@@ -374,6 +380,8 @@ header a.reach {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color 250ms var(--timing-function);
 }
 
 .form-list .form-textarea::placeholder {
@@ -391,6 +399,8 @@ header a.reach {
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+
+  cursor: pointer;
 }
 
 .form .legal-text {
@@ -447,18 +457,41 @@ header a.reach {
   clip: rect(0 0 0 0);
 }
 
-.form .icon-checked {
+.form .legal::before {
+  content: '';
   width: 16px;
   height: 15px;
   border: 2px solid black;
-  border-radius: 2px;
+  border-radius: 4px;
+
+  transition: border-color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
 }
 
-.legal-checkbox:checked + .icon-checked {
+/* .form .icon-checked {
+  width: 16px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 4px;
+
+  transition: border-color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
+} */
+
+/* .legal-checkbox:checked + .icon-checked {
   background-image: url(../images/icons/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
-  border-radius: 2px;
+  border-radius: 4px;
+  border-color: transparent;
+  background-color: var(--hover-focus-text-color);
+} */
+
+.legal-checkbox:checked + .legal::before {
+  background-image: url(../images/icons/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-radius: 4px;
   border-color: transparent;
   background-color: var(--hover-focus-text-color);
 }
@@ -857,12 +890,13 @@ footer a.link {
   color: var(--alternative-white-text);
 }
 
-.foot-form .foot-label {
-  margin-right: 12px;
+.footer-section-3 .foot-form {
+  display: flex;
 }
 
 .foot-form .foot-input {
   padding: 0px 16px;
+  margin-right: 12px;
   width: 358px;
   height: 50px;
 
@@ -879,6 +913,7 @@ footer a.link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   width: 200px;
   height: 50px;
 
