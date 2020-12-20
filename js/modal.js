@@ -1,3 +1,5 @@
+
+// close modal window 
 (() => {
   const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
@@ -13,6 +15,7 @@
   }
 })();
 
+// filter buttons in portfolio
 function myFunctionAll() {
 var xr = document.querySelectorAll(".portfolio-items");
 var i, qty = xr.length;
@@ -136,3 +139,12 @@ xs[i].style.display = "none";
 }
 } 
        
+//Enables or disables a submit button depending
+//on whether a checkbox has been ticked or not.
+function terms_changed(termsCheckBox) {    
+    if (termsCheckBox.checked) {        
+        document.getElementById("submit_button").disabled = false;
+    } else {        
+        document.getElementById("submit_button").disabled = true;
+    }
+}   
